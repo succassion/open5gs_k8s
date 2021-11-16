@@ -15,14 +15,14 @@ $ kubectl get ns
 
 ### MME (4G/5G NSA Core)
 : Mobility Management Entity.
-| Address : s1ap = 127.0.0.2 :36412 for S1-MME
-|         : gtpc = 127.0.0.2 :2123  for S11
-|         : frDi = 127.0.0.2 :3868  for S6a
+- Address : s1ap = 127.0.0.2 :36412 for S1-MME
+          : gtpc = 127.0.0.2 :2123  for S11
+          : frDi = 127.0.0.2 :3868  for S6a
 
 ### SGWC (4G/5G NSA Core)
 : Serving Gateway Control Plane.
-| Address : gtpc = 127.0.0.3 :2123 for S11
-|         : pfcp = 127.0.0.3 :8805 for Sxa
+- Address : gtpc = 127.0.0.3 :2123 for S11
+          : pfcp = 127.0.0.3 :8805 for Sxa
 
 ### SMF (4G/5G NSA Core, 5G SA Core)
 - PGWC(Packet Gateway Control Plane) component contained in Open5GS SMF
