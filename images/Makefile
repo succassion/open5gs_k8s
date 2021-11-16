@@ -34,8 +34,8 @@ help: #c Show this help message.
 	@ @awk '/^#/{ comment = substr($$0,3) } comment && /^[a-zA-Z][a-zA-Z0-9_-]+ ?\?=/{print "   ", $$1, $$2, "",comment}' $(MAKEFILE_LIST) | column -t -s '?=' | sort
 	@ echo ''
 
-build: build-core build-webui #b Build All Images.
-clean: clean-core clean-webui #r Remove All Images.
+build: build-core build-webui build-ueransim #b Build All Images.
+clean: clean-core clean-webui clean-ueransim #r Remove All Images.
 
 build-core: #b Build Core Image.
 	docker build -t ${OPEN5GS_IMAGE}:${TAG} --build-arg VERSION=${TAG} ${OPEN5GS_DOCKER_DIR}

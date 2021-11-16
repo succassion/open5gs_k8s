@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  name: mongodb
+spec:
+  serviceName: open5gs-mongodb
+  replicas: 1
+  template:
+    spec:
+      containers:
+      - name: mongodb
+        image: mongo:4.2.7
+        ports:
+        - name: mongodb
+          containerPort: 27017
+        volumeMounts:
+        - name: mongodb-persistent-storage
+          mountPath: /data/db
+      volumes:
+      - name: mongodb-persistent-storage
+        persistentVolumeClaim:
+          claimName: mongodb-pv-claim

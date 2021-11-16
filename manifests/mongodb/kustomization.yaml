@@ -1,0 +1,8 @@
+namespace: open5gs-k8s
+commonLabels:
+  app: open5gs-mongodb
+resources:
+  - open5gs-mongodb-service.yaml
+  - open5gs-mongodb-persistentVolume.yaml
+  - open5gs-mongodb-persistentVolumeClaim.yaml
+  - open5gs-mongodb-statefulset.yaml

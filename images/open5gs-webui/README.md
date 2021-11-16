@@ -1,7 +1,7 @@
 # WebUI Docker
 
 ### TAG
-Open5GS  : v2.3.6
+Open5GS  : v2.3.6(Now)
 
 ### WebUI Docker build
 ```
